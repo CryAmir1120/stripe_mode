@@ -11,6 +11,7 @@ class WebHookController extends Controller
 {
     public function onetimeHook(Request $request)
     {
+        Log::info('-----Starting captured----');
         try {
             Log::info('-----captured----');
             $payload = json_decode($request->getContent(), true);
