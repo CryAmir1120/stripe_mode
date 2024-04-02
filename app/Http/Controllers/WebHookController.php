@@ -11,6 +11,6 @@ class WebHookController extends Controller
     public function onetimeHook(Request $request)
     {
         $payload = json_decode($request->getContent(), true);
-        event(new WebHookEvent($payload));
+        WebhookReceived::dispatch($payload);
     }
 }

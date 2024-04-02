@@ -6,6 +6,7 @@ use App\Events\WebHookEvent;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Support\Facades\Log;
+use Laravel\Cashier\Events\WebhookReceived;
 
 class OneTimePaySuccessListener
 {
@@ -24,7 +25,7 @@ class OneTimePaySuccessListener
      *
      * @return void
      */
-    public function handle(WebHookEvent $event)
+    public function handle(WebhookReceived $event)
     {
         $payload = $event->payload;
         Log::info('-----captured----');
