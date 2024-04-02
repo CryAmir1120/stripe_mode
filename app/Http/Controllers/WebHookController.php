@@ -10,7 +10,7 @@ use Laravel\Cashier\Http\Controllers\WebhookController as CashierController;
 
 class WebHookController extends CashierController
 {
-    public function onetimeHook(array $payload)
+    public function onetimeHook()
     {
 
         Log::info('-----Starting captured----');
