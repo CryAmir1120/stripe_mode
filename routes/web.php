@@ -30,7 +30,7 @@ Route::group(['prefix' => 'payment', 'as' => 'payment.', 'middleware' => 'auth']
     // });
 });
 
-Route::post('stripe/webhook', [WebHookController::class, 'onetimeHook']);
+Route::post('/stripe/webhook', [WebHookController::class, 'handleWebHook']);
 
 Auth::routes();
 
