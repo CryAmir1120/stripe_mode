@@ -27,7 +27,6 @@ class StripeController extends Controller
             return back()->with('message', 'Product purchased successfully!');
         } catch (Exception $e) {
             return back()->with('error', $e->getMessage());
-            dd($e->getMessage());
         }
     }
 }
