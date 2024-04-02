@@ -6,8 +6,9 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Laravel\Cashier\Events\WebhookReceived;
+use Laravel\Cashier\Http\Controllers\WebhookController as CashierController;
 
-class WebHookController extends Controller
+class WebHookController extends CashierController
 {
     public function onetimeHook(Request $request)
     {
