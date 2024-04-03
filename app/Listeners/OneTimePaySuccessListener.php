@@ -27,7 +27,7 @@ class OneTimePaySuccessListener
      */
     public function handle(WebhookReceived $event)
     {
-        // $payload = $event->payload;
-        Log::info('-----captured---- Listener');
+        $payload = $event->payload;
+        Log::info('-----captured---- Listener'. json_encode($payload));
     }
 }
