@@ -6,12 +6,13 @@ use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class StripeController extends Controller
 {
     public function charge()
     {
         $intent = Auth::user()->createSetupIntent();
-        $product = 'price_1P0xcBRqgiXUgoWt8HXmklKb';
+        $product = 'price_1P1HUgRqgiXUgoWtVd4kYns4';
         $price = 20000;
         $user = auth()->user();
         return view('stripe.charge', compact('intent', 'product', 'price', 'user'));
